@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import axios from "axios";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Matrix from "./components/Matrix/Matrix";
+import Climatology from "./components/Climatology/Climatology";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	state = {
+		matrixForecast: null,
+		matrixCriteria: null,
+		error: false,
+	};
+
+	urlForecast = "https://extendsclass.com/api/json-storage/bin/ddfcdbf";
+	urlCriteria = "https://extendsclass.com/api/json-storage/bin/ffffaef";
+
+	componentDidMount() {
+		axios.all([axios.get(this.urlForecast), axios.get(this.urlCriteria)]).then(
+			axios.spread((forecast, criteria) => {
+				this.setState({
+					matrixForecast: forecast.data,
+					matrixCriteria: criteria.data,
+				});
+				// check if status on both requests is 200
+				if (forecast.status !== 200 || criteria.status !== 200) {
+					this.setState({ error: true });
+				}
+			})
+		);
+	}
+
+	render() {
+		return (
+			<Router>
+				<div>
+					<Navbar title="Fire Wx" />
+					<Switch>
+						<Route path="/" exact>
+							<Matrix
+								forecast={this.state.matrixForecast}
+								criteria={this.state.matrixCriteria}
+								error={this.state.error}
+							/>
+						</Route>
+						<Route path="/climatology" exact>
+							<Climatology />
+						</Route>
+					</Switch>
+				</div>
+			</Router>
+		);
+	}
 }
 
 export default App;
