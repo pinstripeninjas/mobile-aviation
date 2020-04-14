@@ -1,0 +1,12 @@
+.climatology {
+	position: relative;
+	width: 90vw;
+	height: 85vh;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+	.climatology {
+		height: 50vh;
+	}
+}
