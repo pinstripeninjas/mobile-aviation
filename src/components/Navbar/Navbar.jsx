@@ -10,10 +10,10 @@ const Navbar = (props) => {
 			</div>
 			<div>
 				<ul>
-					<NavLink to="/" exact activeClassName="active-nav">
+					<NavLink to="/mobile-aviation" exact activeClassName="active-nav">
 						<li>Matrix</li>
 					</NavLink>
-					<NavLink to="/climatology" exact activeClassName="active-nav">
+					<NavLink to="/mobile-aviation/climatology" exact activeClassName="active-nav">
 						<li>Climatology</li>
 					</NavLink>
 				</ul>

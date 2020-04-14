@@ -37,14 +37,14 @@ class App extends Component {
 				<div>
 					<Navbar title="Fire Wx" />
 					<Switch>
-						<Route path="/" exact>
+						<Route path="/mobile-aviation" exact>
 							<Matrix
 								forecast={this.state.matrixForecast}
 								criteria={this.state.matrixCriteria}
 								error={this.state.error}
 							/>
 						</Route>
-						<Route path="/climatology" exact>
+						<Route path="/mobile-aviation/climatology" exact>
 							<Climatology />
 						</Route>
 					</Switch>
