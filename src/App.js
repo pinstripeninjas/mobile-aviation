@@ -12,8 +12,8 @@ class App extends Component {
 		error: false,
 	};
 
-	urlForecast = "https://extendsclass.com/api/json-storage/bin/ddfcdbf";
-	urlCriteria = "https://extendsclass.com/api/json-storage/bin/ffffaef";
+	urlForecast = "https://extendsclass.com/api/json-storage/bin/cfbaeae";
+	urlCriteria = "https://extendsclass.com/api/json-storage/bin/cbdbfad";
 
 	componentDidMount() {
 		axios.all([axios.get(this.urlForecast), axios.get(this.urlCriteria)]).then(

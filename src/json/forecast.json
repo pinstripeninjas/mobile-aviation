@@ -12,73 +12,85 @@
 			"dataType": "textbox",
 			"variable": "maxT",
 			"fullName": "Max Temperature",
-			"values": [101, 98, 88, 90, 91, 93, 90]
+			"values": [101, 98, 88, 90, 91, 93, 90],
+			"category": []
 		},
 		{
 			"dataType": "textbox",
 			"variable": "densityAlt",
 			"fullName": "Density Altitiude",
-			"values": [5700, 5300, 4600, 4800, 4900, 5000, 4600]
+			"values": [5700, 5300, 4600, 4800, 4900, 5000, 4600],
+			"category": []
 		},
 		{
 			"dataType": "textbox",
 			"variable": "maxSfcWind",
 			"fullName": "Max Surface Wind",
-			"values": ["NW 8", "W 12", "SW 18", "NW 10", "NW 8", "W 8", "W 5"]
+			"values": ["NW 8", "W 12", "SW 18", "NW 10", "NW 8", "W 8", "W 5"],
+			"category": []
 		},
 		{
 			"dataType": "textbox",
 			"variable": "maxGustSpread",
 			"fullName": "Max Gust Spread",
-			"values": [3, 5, 7, 4, 3, 3, 2]
+			"values": [3, 5, 7, 4, 3, 3, 2],
+			"category": []
 		},
 		{
 			"dataType": "textbox",
 			"variable": "TSRA",
 			"fullName": "Thunderstorms",
-			"values": [0, 10, 60, 0, 0, 0, 0]
+			"values": [0, 10, 60, 0, 0, 0, 0],
+			"category": []
 		},
 		{
 			"dataType": "textbox",
 			"variable": "maxRH",
 			"fullName": "Max Relative Humidty",
-			"values": [20, 60, 85, 70, 50, 30, 25]
+			"values": [20, 60, 85, 70, 50, 30, 25],
+			"category": []
 		},
 		{
 			"dataType": "textbox",
 			"variable": "wind10k",
 			"fullName": "Winds 10k ft AGL",
-			"values": [20, 30, 35, 20, 15, 20, 15]
+			"values": [20, 30, 35, 20, 15, 20, 15],
+			"category": []
 		},
 		{
 			"dataType": "textbox",
 			"variable": "totalCloud",
 			"fullName": "Total Cloud Cover",
-			"values": [20, 30, 90, 50, 10, 20, 10]
+			"values": [20, 30, 90, 50, 10, 20, 10],
+			"category": []
 		},
 		{
 			"dataType": "dropdown",
 			"variable": "visibility",
 			"fullName": "Visibility",
-			"values": [0, 0, "2-3mi", 0, 0, 0, 0]
+			"values": ["> 3", "> 3", "2-3", "> 3", "> 3", "> 3", "> 3"],
+			"category": [0, 0, 1, 0, 0, 0, 0]
 		},
 		{
 			"dataType": "dropdown",
 			"variable": "wind5k",
 			"fullName": "Winds 5k ft AGL",
-			"values": [0, 0, "20-30", 0, 0, 0, 0]
+			"values": ["< 20", "< 20", "20-30", "< 20", "< 20", "< 20", "< 20"],
+			"category": [0, 0, 1, 0, 0, 0, 0]
 		},
 		{
 			"dataType": "dropdown",
 			"variable": "lowestFltCat",
 			"fullName": "Lowest Flight Category",
-			"values": [0, 0, "MVRF", 0, 0, 0, 0]
+			"values": ["VFR", "VFR", "MVRF", "VFR", "VFR", "VFR", "VFR"],
+			"category": [0, 0, 1, 0, 0, 0, 0]
 		},
 		{
 			"dataType": "dropdown",
 			"variable": "mtnObs",
 			"fullName": "Mountain Obscuration",
-			"values": [0, 0, "Psbl", 0, 0, 0, 0]
+			"values": ["None", "None", "Psbl", "None", "None", "None", "None"],
+			"category": [0, 0, 1, 0, 0, 0, 0]
 		}
 	]
 }

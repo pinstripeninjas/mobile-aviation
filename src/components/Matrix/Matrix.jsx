@@ -24,7 +24,6 @@ const Matrix = ({ forecast, criteria, error }) => {
 	for (let i = 0; i < forecast.validPeriod.day.length; i++) {
 		dataArray.push(forecast.validPeriod.day[i] + " - " + forecast.validPeriod.date[i]);
 	}
-	console.log(dataArray);
 
 	return (
 		<div>
@@ -38,6 +37,8 @@ const Matrix = ({ forecast, criteria, error }) => {
 									key={j}
 									name={field.fullName}
 									value={field.values[i]}
+									dataType={field.dataType}
+									category={field.category[i]}
 									criteria={criteria.body[j]}
 								/>
 							);
