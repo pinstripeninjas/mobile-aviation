@@ -26,7 +26,6 @@ class App extends Component {
 				if (forecast.status !== 200 || criteria.status !== 200) {
 					this.setState({ error: true });
 				}
-				console.log("forecast request made");
 			})
 		);
 	}

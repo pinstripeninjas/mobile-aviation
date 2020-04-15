@@ -39,7 +39,6 @@ class Climatology extends Component {
 
 			// setState with new array of chart data
 			this.setState({ data: { labels: res.data.labels, datasets: newDataArray } });
-			console.log("climate request made");
 		});
 	}
 

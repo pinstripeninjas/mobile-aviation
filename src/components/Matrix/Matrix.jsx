@@ -27,6 +27,10 @@ const Matrix = ({ forecast, criteria, error }) => {
 
 	return (
 		<div>
+			<div className="criteria-pro-tip">
+				Click and hold on forecast field for criteria
+				<i style={{ marginLeft: "5px" }} className="fas fa-arrow-circle-down"></i>
+			</div>
 			{dataArray.map((day, i) => {
 				return (
 					<div key={i}>
