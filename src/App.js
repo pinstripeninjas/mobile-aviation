@@ -38,14 +38,14 @@ class App extends Component {
 				<div>
 					<Navbar title="Aviation" />
 					<Switch>
-						<Route path="/mobile-aviation" exact>
+						<Route path="/matrix_mobile" exact>
 							<Matrix
 								forecast={this.state.matrixForecast}
 								criteria={this.state.matrixCriteria}
 								error={this.state.error}
 							/>
 						</Route>
-						<Route path="/mobile-aviation/climatology" exact>
+						<Route path="/matrix_climo_mobile" exact>
 							<Climatology />
 						</Route>
 					</Switch>
