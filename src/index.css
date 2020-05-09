@@ -19,6 +19,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* Navbar related */
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -59,6 +60,22 @@ li {
 
 .active-nav {
 	background-color: var(--primary-blue-dark);
+}
+
+.fixed-nav-msg {
+	position: fixed;
+	width: 100%;
+	top: 0%;
+}
+
+.criteria-pro-tip {
+	background-color: #fff;
+	border-bottom: 3px solid var(--dark-gray);
+}
+
+/* Main Content */
+.main-content {
+	margin-top: 86px;
 }
 
 /* Margin Amounts */
