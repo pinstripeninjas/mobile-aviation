@@ -3,7 +3,10 @@ import Criteria from "../Criteria/Criteria";
 import "./MatrixLine.css";
 
 class MatrixLine extends Component {
-	state = { clickCriteria: false };
+	state = {
+		clickCriteria: false,
+		criteriaLocation: 0,
+	};
 
 	render() {
 		let { name, dataType, category, value, criteria } = this.props;
@@ -14,7 +17,10 @@ class MatrixLine extends Component {
 		// variable to handle setTimeout/clearTimeout
 		let timeout;
 
-		const handleClickCriteria = () => {
+		const handleClickCriteria = (event) => {
+			// needs code that will find the y coordinate of the click and set state to criteriaLocation
+			//console.log(event.clientY, event.e.touches);
+			this.setState({ criteriaLocation: event.clientY });
 			timeout = setTimeout(() => this.setState({ clickCriteria: true }), 1000);
 		};
 
@@ -46,7 +52,9 @@ class MatrixLine extends Component {
 
 		return (
 			<Fragment>
-				{this.state.clickCriteria ? <Criteria name={name} criteria={criteria} /> : null}
+				{this.state.clickCriteria ? (
+					<Criteria name={name} criteria={criteria} location={this.state.criteriaLocation} />
+				) : null}
 				<div
 					className={`${color} matrix-line`}
 					onTouchStart={handleClickCriteria}

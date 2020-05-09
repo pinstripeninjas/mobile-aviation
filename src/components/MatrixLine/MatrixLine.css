@@ -13,12 +13,6 @@
 	text-align: right;
 }
 
-.criteria-pro-tip {
-	color: var(--dark-gray);
-	font-size: 0.9rem;
-	text-align: center;
-}
-
 .green {
 	background-color: var(--green);
 }

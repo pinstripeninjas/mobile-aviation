@@ -14,27 +14,9 @@
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Quicksand", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-/* Navbar related */
-nav {
-	display: flex;
-	justify-content: space-between;
-	height: 45px;
-	line-height: 45px;
-	background-color: var(--primary-blue);
-	color: #fff;
-}
-
-nav i {
-	margin-right: 7px;
-}
-
-nav div {
-	margin: 0 20px;
 }
 
 a {
@@ -54,23 +36,11 @@ li {
 	list-style-type: none;
 }
 
-.nav-title {
-	font-size: 1.5rem;
-}
-
-.active-nav {
-	background-color: var(--primary-blue-dark);
-}
-
-.fixed-nav-msg {
+.centered {
 	position: fixed;
-	width: 100%;
-	top: 0%;
-}
-
-.criteria-pro-tip {
-	background-color: #fff;
-	border-bottom: 3px solid var(--dark-gray);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* Main Content */

@@ -1,0 +1,39 @@
+/* Navbar related */
+nav {
+	display: flex;
+	justify-content: space-between;
+	height: 45px;
+	line-height: 45px;
+	background-color: var(--primary-blue);
+	color: #fff;
+}
+
+nav i {
+	margin-right: 7px;
+}
+
+nav div {
+	margin: 0 10px;
+}
+
+.nav-title {
+	font-size: 1.5rem;
+}
+
+.active-nav {
+	background-color: var(--primary-blue-dark);
+}
+
+.fixed-nav-msg {
+	position: fixed;
+	width: 100%;
+	top: 0%;
+}
+
+.criteria-pro-tip {
+	background-color: #fff;
+	border-bottom: 3px solid var(--dark-gray);
+	color: var(--dark-gray);
+	font-size: 0.9rem;
+	text-align: center;
+}

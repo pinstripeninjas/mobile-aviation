@@ -12,7 +12,9 @@ class App extends Component {
 		error: false,
 	};
 
-	urlForecast = "https://extendsclass.com/api/json-storage/bin/cfbaeae";
+	// https://extendsclass.com/api/json-storage/bin/cfbaeae
+
+	urlForecast = "http://128.196.125.36/matrix/?get_data_aviation";
 	urlCriteria = "https://extendsclass.com/api/json-storage/bin/cbdbfad";
 
 	componentDidMount() {
@@ -34,7 +36,7 @@ class App extends Component {
 		return (
 			<Router>
 				<div>
-					<Navbar title="Fire Wx" />
+					<Navbar title="Aviation" />
 					<Switch>
 						<Route path="/mobile-aviation" exact>
 							<Matrix

@@ -1,12 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import "./Navbar.css";
+
 const Navbar = (props) => {
 	return (
 		<div className="fixed-nav-msg">
 			<nav>
 				<div className="nav-title">
-					<i className="fas fa-fire"></i>
+					<i className="fas fa-plane"></i>
 					{props.title}
 				</div>
 				<div>
